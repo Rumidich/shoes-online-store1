@@ -1,10 +1,10 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import Main from "./components/Main/Main";
 import ShoesList from "./components/ShoesList/ShoesList";
 import AddShoes from "./components/AddShoes/AddShoes";
 import EditCard from "./components/EditCard/EditCard";
 import DetailsOfCard from "./components/DetailsOfCard/DetailsOfCard";
+import Main from "./components/Main/Main";
 
 const Routing = () => {
   return (

@@ -42,22 +42,22 @@ const AddShoes = () => {
       <Input
         value={title}
         onChange={e => setTitle(e.target.value)}
-        defaultValue="name"
+        placeholder="name"
       />
       <Input
         value={price}
         onChange={e => setPrice(e.target.value)}
-        defaultValue="price"
+        placeholder="price"
       />
       <Input
         value={description}
         onChange={e => setDescription(e.target.value)}
-        defaultValue="description"
+        placeholder="description"
       />
       <Input
         value={image}
         onChange={e => setImage(e.target.value)}
-        defaultValue="image"
+        placeholder="image"
       />
       <Link to="/store">
         <Button onClick={() => handleSave()} type="primary">
