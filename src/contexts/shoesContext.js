@@ -25,6 +25,8 @@ function reducer(state = INIT_STATE, action) {
         ...state,
         oneShoe: action.payload,
       };
+    default:
+      return state;
   }
 }
 
@@ -48,20 +50,28 @@ const ShoesContextProvider = ({ children }) => {
   }
 
   //! (DETAILS , GET TO EDIT)
+
   async function getOneShoe(id) {
     const res = await axios(`${SHOES_API}/${id}`);
-    dispatch({
-      type: "GET_ONE",
-      payload: res.data,
-    });
+    console.log(JSON.stringify(res.data));
+    // dispatch({
+    //   type: "GET_ONE",
+    //   payload: res.data,
+    // });
   }
+  useEffect(() => {
+    getOneShoe();
+  }, []);
   //! UPDATE
-
+  // async function updateShoe(id, updatedShoe) {
+  //   await axios.patch(`${SHOES_API}/${id}`, updatedShoe);
+  // }
   //! DELETE
   async function deleteShoes(id) {
     await axios.delete(`${SHOES_API}/${id}`);
     getShoes();
   }
+
   return (
     <shoesContext.Provider
       value={{
@@ -71,6 +81,7 @@ const ShoesContextProvider = ({ children }) => {
         getOneShoe,
         addShoes,
         deleteShoes,
+        // updateShoe,
       }}>
       {children}
     </shoesContext.Provider>

@@ -66,11 +66,11 @@ const items = [
         children: [
           {
             label: "Option 1",
-            key: "setting:1",
+            // key: "setting:1",
           },
           {
             label: "Option 2",
-            key: "setting:2",
+            // key: "setting:2",
           },
         ],
       },
@@ -86,11 +86,11 @@ const items = [
         children: [
           {
             label: "Jordan",
-            key: "setting:1",
+            // key: "setting:1",
           },
           {
             label: "Option 2",
-            key: "setting:2",
+            // key: "setting:2",
           },
         ],
       },
@@ -101,7 +101,6 @@ const items = [
       <div>
         <Space direction="vertical">
           <Search
-            selectable={false}
             style={{ margin: "5px 0px" }}
             placeholder="input search text"
             enterButton="Search"

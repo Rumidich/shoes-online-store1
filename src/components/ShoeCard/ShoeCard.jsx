@@ -25,7 +25,7 @@ const ShoeCard = ({ item }) => {
           key="setting"
           onClick={() => navigate("/details/:id")}
         />,
-        <EditOutlined key="edit" />,
+        <EditOutlined key="edit" onClick={() => navigate("/edit/:id")} />,
         <DeleteOutlined key="ellipsis" onClick={() => deleteShoes(item.id)} />,
       ]}>
       <Meta
